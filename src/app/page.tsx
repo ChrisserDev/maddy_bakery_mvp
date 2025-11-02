@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import AboutBakerySection from "./components/about/about";
+import BakeryGallery from "./components/gallery/gallery";
 import Footer from "./components/footer/footer";
 import "./home.scss";
 
@@ -65,6 +67,7 @@ export default function Home() {
             <Image src="/images/goodies_basket.png" alt="Basket of pastries" width={500} height={600} className="basket-image" />
           </div>
         </section>
+        <AboutBakerySection />
 
         <section id="categories" className="categories container" aria-label="Categories">
           <h3 className="categories-title">Categories</h3>
@@ -218,6 +221,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <BakeryGallery />
       </main>
       <Footer />
     </div>

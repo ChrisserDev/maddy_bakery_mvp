@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import AboutBakerySection from "./components/about/about";
 import BakeryGallery from "./components/gallery/gallery";
+import TestimonialsSection from "./components/testimonials/page";
+import VisitUsSection from "./components/visitUs/page";
 import Footer from "./components/footer/footer";
 import "./home.scss";
 
@@ -220,8 +222,10 @@ export default function Home() {
               </ul>
             </div>
           </div>
-        </section>
-        <BakeryGallery />
+  </section>
+  <BakeryGallery />
+  <TestimonialsSection />
+        <VisitUsSection />
       </main>
       <Footer />
     </div>

@@ -13,11 +13,11 @@ const hours = [
 
 export default function VisitUsSection() {
   return (
-    <section className="visit-us container" aria-labelledby="visit-us-title">
+    <section id="visit-us" className="visit-us container" aria-labelledby="visit-us-title">
       <div className="visit-content">
         <span className="visit-eyebrow">Visit Us</span>
-        <h2 id="visit-us-title" className="visit-title">Follow the smell of fresh bread — we&apos;re just around the corner!</h2>
-        <p className="visit-text">Pop by our cozy bakery for a warm croissant, a chat with the team, or to pick up a custom celebration cake. We love meeting our neighbours and sharing the sweet moments in person.</p>
+        <h2 id="visit-us-title" className="visit-title">Follow the smell of fresh bread - we&apos;re just around the corner!</h2>
+        <p className="visit-text">Pop by our cozy bakery for a warm croissant, a chat with the team, or to pick up a custom celebration cake. We love meeting our customers and sharing the sweet moments in person.</p>
 
         <address className="visit-address">
           <strong className="address-line">Maddy&apos;s Bakery</strong>

@@ -1,8 +1,11 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import AboutBakerySection from "./components/about/about";
 import BakeryGallery from "./components/gallery/gallery";
 import TestimonialsSection from "./components/testimonials/page";
+import CategoriesSection from "./components/categories/page";
 import VisitUsSection from "./components/visitUs/page";
 import Footer from "./components/footer/footer";
 import "./home.scss";
@@ -33,8 +36,82 @@ const AlcoholIcon = () => (
 );
 
 export default function Home() {
+  const [navDirection, setNavDirection] = useState<"down" | "up" | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      const documentHeight = document.body.scrollHeight;
+      const visitSection = document.getElementById("visit-us");
+      const heroSection = document.querySelector<HTMLElement>(".hero");
+      const categoriesSection = document.getElementById("categories");
+
+      let navActive = true;
+
+      if (heroSection) {
+        // Delay showing the floating control until the hero is mostly out of view.
+        const heroRect = heroSection.getBoundingClientRect();
+        navActive = heroRect.bottom < viewportHeight * 0.6;
+      } else {
+        navActive = scrollY > viewportHeight * 0.2;
+      }
+
+      if (!navActive) {
+        setNavDirection(null);
+        return;
+      }
+
+      let direction: "down" | "up" | null = null;
+
+      const visitTop = visitSection ? visitSection.getBoundingClientRect().top + scrollY : null;
+
+      if (visitTop !== null) {
+        const nearVisit = scrollY + viewportHeight >= visitTop - 140;
+        if (!nearVisit) {
+          direction = "down";
+        }
+      } else if (scrollY + viewportHeight < documentHeight - 320) {
+        direction = "down";
+      }
+
+      if (categoriesSection) {
+        // Switch to an "up" affordance once the categories section is mostly behind the user.
+        const categoriesRect = categoriesSection.getBoundingClientRect();
+        const categoriesTop = categoriesRect.top + scrollY;
+        const categoriesHeight = categoriesRect.height;
+        const upThreshold = categoriesTop + categoriesHeight * 0.4;
+
+        if (scrollY > upThreshold) {
+          direction = "up";
+        }
+      } else if (scrollY > viewportHeight * 0.75) {
+        direction = "up";
+      }
+
+      if (visitTop !== null) {
+        const pastVisit = scrollY >= visitTop - viewportHeight * 0.2;
+        if (pastVisit) {
+          direction = "up";
+        }
+      }
+
+      setNavDirection(direction);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="homepage-container">
+    <div className="homepage-container" id="page-top">
       <header className="header container">
         <Link href="/" className="logo">
           <Image src="/images/maddys_logo.png" alt="Maddy's Bakery logo" width={150} height={150} />
@@ -58,54 +135,23 @@ export default function Home() {
         <section className="hero container">
           <div className="hero-content">
             <h1 className="hero-title">
-              <span>Welcome to</span>
-              <span>Maddy&apos;s Bakery</span>
+              <span>At Maddy&apos;s Bakery, every pastry tells a story.</span>
             </h1>
-            <p className="hero-description">Baked with <span className="accent-desc">love</span>, shared with <span className="accent-desc">joy</span>.<br/><span className="accent-desc">Every</span> loaf, pastry, and cake is made from <span className="accent-desc">scratch</span>, filled with care, and meant to bring <span className="accent-desc">smiles</span> with every bite.</p>
-            <Link href="/order" className="cta-button">Order Now</Link>
+            <p className="hero-description">What started as a <span className="accent-desc">small kitchen dream</span> has grown into a <span className="accent-desc">local favorite</span> - baking daily with <span className="accent-desc">love</span>, <span className="accent-desc">tradition</span>, and a <span className="accent-desc">sprinkle of joy</span>. From the <span className="accent-desc">crackle</span> of fresh loaves to the <span className="accent-desc">swirl</span> of frosting on a custom cake, we pour our <span className="accent-desc">hearts</span> into every batch.</p>
+            <div className="hero-actions">
+              <Link href="/order" className="cta-button" aria-label="Order from Maddy's Bakery">Order Now</Link>
+              <a href="#visit-us" className="about-cta" aria-label="Jump to Visit Us section">Visit Us</a>
+            </div>
           </div>
           <div className="hero-image">
             <div className="pink-cloud" aria-hidden />
             <Image src="/images/goodies_basket.png" alt="Basket of pastries" width={500} height={600} className="basket-image" />
           </div>
         </section>
-        <AboutBakerySection />
 
-        <section id="categories" className="categories container" aria-label="Categories">
-          <h3 className="categories-title">Categories</h3>
-          <div className="categories-grid">
-            <a className="category-card" href="/products#pastries">
-              <Image src="/images/pastries.png" alt="Pastries" width={140} height={160} className="category-image" />
-              <div className="category-info">
-                <span className="category-label">Pastries</span>
-                <span className="category-arrow" aria-hidden>→</span>
-              </div>
-            </a>
-            <a className="category-card" href="/products#cakes">
-              <Image src="/images/cakes.png" alt="Cakes" width={140} height={160} className="category-image" />
-              <div className="category-info">
-                <span className="category-label">Cakes</span>
-                <span className="category-arrow" aria-hidden>→</span>
-              </div>
-            </a>
-            <a className="category-card" href="/products#bread">
-              <Image src="/images/bread.png" alt="Bread" width={140} height={160} className="category-image" />
-              <div className="category-info">
-                <span className="category-label">Bread</span>
-                <span className="category-arrow" aria-hidden>→</span>
-              </div>
-            </a>
-            <a className="category-card" href="/products#cookies">
-              <Image src="/images/cookies.png" alt="Cookies" width={140} height={160} className="category-image" />
-              <div className="category-info">
-                <span className="category-label">Cookies</span>
-                <span className="category-arrow" aria-hidden>→</span>
-              </div>
-            </a>
-          </div>
-        </section>
+        <CategoriesSection />
 
-        <section className="todays-specials container">
+  <section className="todays-specials container">
           <div className="todays-specials-header">
             <h3 className="todays-specials-title">Today&apos;s Specials</h3>
             <p className="todays-specials-intro">We mark each treat with simple icons so you can quickly see the key ingredients and choose the perfect delight for your day.</p>
@@ -223,9 +269,23 @@ export default function Home() {
             </div>
           </div>
   </section>
-  <BakeryGallery />
-  <TestimonialsSection />
+        <BakeryGallery />
+        <TestimonialsSection />
         <VisitUsSection />
+
+        {navDirection && (
+          <nav className="page-nav-floating" aria-label="Quick page navigation">
+            {navDirection === "up" ? (
+              <a href="#page-top" className="page-nav-button" aria-label="Scroll to top of page">
+                <span aria-hidden>↑</span>
+              </a>
+            ) : (
+              <a href="#visit-us" className="page-nav-button" aria-label="Jump to Visit Us section">
+                <span aria-hidden>↓</span>
+              </a>
+            )}
+          </nav>
+        )}
       </main>
       <Footer />
     </div>

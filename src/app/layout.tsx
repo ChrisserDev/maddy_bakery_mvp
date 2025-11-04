@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display, Dancing_Script, Lato } from "next/font/google";
 import "./globals.scss";
+import Navigation from "./components/navigation/page";
+import Footer from "./components/footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +44,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${dancing.variable} ${lato.variable}`}>
+        <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );

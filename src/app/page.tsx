@@ -7,7 +7,6 @@ import BakeryGallery from "./components/gallery/gallery";
 import TestimonialsSection from "./components/testimonials/page";
 import CategoriesSection from "./components/categories/page";
 import VisitUsSection from "./components/visitUs/page";
-import Footer from "./components/footer/footer";
 import "./home.scss";
 
 const GlutenIcon = () => (
@@ -112,25 +111,6 @@ export default function Home() {
 
   return (
     <div className="homepage-container" id="page-top">
-      <header className="header container">
-        <Link href="/" className="logo">
-          <Image src="/images/maddys_logo.png" alt="Maddy's Bakery logo" width={150} height={150} />
-        </Link>
-        <nav className="nav" aria-label="Primary navigation">
-          <Link href="/about" className="nav-link">About Us</Link>
-          <Link href="/products" className="nav-link">Products</Link>
-          <a href="#categories" className="nav-link">Categories</a>
-          <Link href="/custom-order" className="nav-link">Custom Order</Link>
-          <Link href="/ingredients" className="nav-link">Ingredients</Link>
-          <span className="nav-icons" aria-hidden>
-            <svg className="icon" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="1.8">
-              <path d="M5 8h14v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8Z" strokeLinecap="round" />
-              <path d="M8 8c0-2.5 1.75-4 4-4s4 1.5 4 4" strokeLinecap="round" />
-            </svg>
-          </span>
-        </nav>
-      </header>
-
       <main className="main">
         <section className="hero container">
           <div className="hero-content">
@@ -139,7 +119,7 @@ export default function Home() {
             </h1>
             <p className="hero-description">What started as a <span className="accent-desc">small kitchen dream</span> has grown into a <span className="accent-desc">local favorite</span> - baking daily with <span className="accent-desc">love</span>, <span className="accent-desc">tradition</span>, and a <span className="accent-desc">sprinkle of joy</span>. From the <span className="accent-desc">crackle</span> of fresh loaves to the <span className="accent-desc">swirl</span> of frosting on a custom cake, we pour our <span className="accent-desc">hearts</span> into every batch.</p>
             <div className="hero-actions">
-              <Link href="/order" className="cta-button" aria-label="Order from Maddy's Bakery">Order Now</Link>
+              <Link href="/order-online" className="cta-button" aria-label="Order from Maddy's Bakery">Order Online</Link>
               <a href="#visit-us" className="about-cta" aria-label="Jump to Visit Us section">Visit Us</a>
             </div>
           </div>
@@ -151,125 +131,125 @@ export default function Home() {
 
         <CategoriesSection />
 
-  <section className="todays-specials container">
-          <div className="todays-specials-header">
-            <h3 className="todays-specials-title">Today&apos;s Specials</h3>
-            <p className="todays-specials-intro">We mark each treat with simple icons so you can quickly see the key ingredients and choose the perfect delight for your day.</p>
-            <ul className="todays-specials-legend" aria-label="Ingredient and allergen legend">
-              <li className="legend-item" aria-label="Contains gluten">
-                <span className="dietary-icon icon-gluten" aria-hidden="true">
-                  <GlutenIcon />
-                </span>
-                <span className="legend-label">Contains Gluten</span>
-              </li>
-              <li className="legend-item" aria-label="Contains dairy">
-                <span className="dietary-icon icon-dairy" aria-hidden="true">
-                  <DairyIcon />
-                </span>
-                <span className="legend-label">Contains Dairy</span>
-              </li>
-              <li className="legend-item" aria-label="Contains alcohol">
-                <span className="dietary-icon icon-alcohol" aria-hidden="true">
-                  <AlcoholIcon />
-                </span>
-                <span className="legend-label">Contains Alcohol</span>
-              </li>
-            </ul>
-          </div>
-          <div className="todays-specials-grid">
-            <div className="special-card">
-              <Image src="/images/cremsnit.png" alt="Special Cake" width={200} height={200} className="special-image" />
-              <h4 className="special-name">Custard Cake “Cremsnit”</h4>
-              <p className="special-description">Lovely puff pastry, <span className="special-ingredient">#cremapasticcera</span> custard filling with double cream <span className="special-ingredient">#cremadiplomatica</span> with true vanilla.</p>
-              <ul className="special-attributes" aria-label="Cremsnit contains gluten and dairy">
-                <li className="special-attribute" aria-label="Contains gluten">
-                  <span className="dietary-icon icon-gluten" aria-hidden="true">
-                    <GlutenIcon />
-                  </span>
-                </li>
-                <li className="special-attribute" aria-label="Contains dairy">
-                  <span className="dietary-icon icon-dairy" aria-hidden="true">
-                    <DairyIcon />
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="special-card">
-              <Image src="/images/blackforest.png" alt="Special Pastry" width={200} height={200} className="special-image" />
-              <h4 className="special-name">Black Forest</h4>
-              <p className="special-description">Fluffy chocolate sponge, fresh filling made with mascarpone, double cream and sour cream, sour cherry.</p>
-              <ul className="special-attributes" aria-label="Black forest cake contains gluten and dairy">
-                <li className="special-attribute" aria-label="Contains gluten">
-                  <span className="dietary-icon icon-gluten" aria-hidden="true">
-                    <GlutenIcon />
-                  </span>
-                </li>
-                <li className="special-attribute" aria-label="Contains dairy">
-                  <span className="dietary-icon icon-dairy" aria-hidden="true">
-                    <DairyIcon />
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="special-card">
-              <Image src="/images/eclairs.png" alt="Special Bread" width={200} height={200} className="special-image" />
-              <h4 className="special-name">Eclairs</h4>
-              <p className="special-description">Crunchy shells made by us, true vanilla filling <span className="special-ingredient">#cremapasticcera</span> made with yolks, milk, double cream and vanilla, dipped in Callebaut chocolate <span className="special-ingredient">#callebaut</span>.</p>
-              <ul className="special-attributes" aria-label="Eclairs contain gluten and dairy">
-                <li className="special-attribute" aria-label="Contains gluten">
-                  <span className="dietary-icon icon-gluten" aria-hidden="true">
-                    <GlutenIcon />
-                  </span>
-                </li>
-                <li className="special-attribute" aria-label="Contains dairy">
-                  <span className="dietary-icon icon-dairy" aria-hidden="true">
-                    <DairyIcon />
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="special-card">
-              <Image src="/images/amandina.png" alt="Chocolate cake Amandina" width={200} height={200} className="special-image" />
-              <h4 className="special-name">Chocolate Cake “Amandina”</h4>
-              <p className="special-description">Fluffy chocolate sponge, moist in a caramel syrup made from caramelised sugar, rum, true rum, chocolate filling made with yolks, milk, double cream, butter and chocolate <span className="special-ingredient">#callebaut</span>, chocolate fondant icing on top.</p>
-              <ul className="special-attributes" aria-label="Amandina contains gluten, dairy and alcohol">
-                <li className="special-attribute" aria-label="Contains gluten">
-                  <span className="dietary-icon icon-gluten" aria-hidden="true">
-                    <GlutenIcon />
-                  </span>
-                </li>
-                <li className="special-attribute" aria-label="Contains dairy">
-                  <span className="dietary-icon icon-dairy" aria-hidden="true">
-                    <DairyIcon />
-                  </span>
-                </li>
-                <li className="special-attribute" aria-label="Contains alcohol">
-                  <span className="dietary-icon icon-alcohol" aria-hidden="true">
-                    <AlcoholIcon />
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="special-card">
-              <Image src="/images/tiramisu.png" alt="Tiramisu cheesecake" width={200} height={200} className="special-image" />
-              <h4 className="special-name">Tiramisu Cheesecake</h4>
-              <p className="special-description">Lady fingers sponge made by us, coffee, creamy filling made with mascarpone and double cream.</p>
-              <ul className="special-attributes" aria-label="Tiramisu cheesecake contains gluten and dairy">
-                <li className="special-attribute" aria-label="Contains gluten">
-                  <span className="dietary-icon icon-gluten" aria-hidden="true">
-                    <GlutenIcon />
-                  </span>
-                </li>
-                <li className="special-attribute" aria-label="Contains dairy">
-                  <span className="dietary-icon icon-dairy" aria-hidden="true">
-                    <DairyIcon />
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-  </section>
-        <BakeryGallery />
+        <section className="todays-specials container">
+                <div className="todays-specials-header">
+                  <h3 className="todays-specials-title">Today&apos;s Specials</h3>
+                  <p className="todays-specials-intro">We mark each treat with simple icons so you can quickly see the key ingredients and choose the perfect delight for your day.</p>
+                  <ul className="todays-specials-legend" aria-label="Ingredient and allergen legend">
+                    <li className="legend-item" aria-label="Contains gluten">
+                      <span className="dietary-icon icon-gluten" aria-hidden="true">
+                        <GlutenIcon />
+                      </span>
+                      <span className="legend-label">Contains Gluten</span>
+                    </li>
+                    <li className="legend-item" aria-label="Contains dairy">
+                      <span className="dietary-icon icon-dairy" aria-hidden="true">
+                        <DairyIcon />
+                      </span>
+                      <span className="legend-label">Contains Dairy</span>
+                    </li>
+                    <li className="legend-item" aria-label="Contains alcohol">
+                      <span className="dietary-icon icon-alcohol" aria-hidden="true">
+                        <AlcoholIcon />
+                      </span>
+                      <span className="legend-label">Contains Alcohol</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="todays-specials-grid">
+                  <div className="special-card">
+                    <Image src="/images/cremsnit.png" alt="Special Cake" width={200} height={200} className="special-image" />
+                    <h4 className="special-name">Custard Cake “Cremsnit”</h4>
+                    <p className="special-description">Lovely puff pastry, <span className="special-ingredient">#cremapasticcera</span> custard filling with double cream <span className="special-ingredient">#cremadiplomatica</span> with true vanilla.</p>
+                    <ul className="special-attributes" aria-label="Cremsnit contains gluten and dairy">
+                      <li className="special-attribute" aria-label="Contains gluten">
+                        <span className="dietary-icon icon-gluten" aria-hidden="true">
+                          <GlutenIcon />
+                        </span>
+                      </li>
+                      <li className="special-attribute" aria-label="Contains dairy">
+                        <span className="dietary-icon icon-dairy" aria-hidden="true">
+                          <DairyIcon />
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="special-card">
+                    <Image src="/images/blackforest.png" alt="Special Pastry" width={200} height={200} className="special-image" />
+                    <h4 className="special-name">Black Forest</h4>
+                    <p className="special-description">Fluffy chocolate sponge, fresh filling made with mascarpone, double cream and sour cream, sour cherry.</p>
+                    <ul className="special-attributes" aria-label="Black forest cake contains gluten and dairy">
+                      <li className="special-attribute" aria-label="Contains gluten">
+                        <span className="dietary-icon icon-gluten" aria-hidden="true">
+                          <GlutenIcon />
+                        </span>
+                      </li>
+                      <li className="special-attribute" aria-label="Contains dairy">
+                        <span className="dietary-icon icon-dairy" aria-hidden="true">
+                          <DairyIcon />
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="special-card">
+                    <Image src="/images/eclairs.png" alt="Special Bread" width={200} height={200} className="special-image" />
+                    <h4 className="special-name">Eclairs</h4>
+                    <p className="special-description">Crunchy shells made by us, true vanilla filling <span className="special-ingredient">#cremapasticcera</span> made with yolks, milk, double cream and vanilla, dipped in Callebaut chocolate <span className="special-ingredient">#callebaut</span>.</p>
+                    <ul className="special-attributes" aria-label="Eclairs contain gluten and dairy">
+                      <li className="special-attribute" aria-label="Contains gluten">
+                        <span className="dietary-icon icon-gluten" aria-hidden="true">
+                          <GlutenIcon />
+                        </span>
+                      </li>
+                      <li className="special-attribute" aria-label="Contains dairy">
+                        <span className="dietary-icon icon-dairy" aria-hidden="true">
+                          <DairyIcon />
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="special-card">
+                    <Image src="/images/amandina.png" alt="Chocolate cake Amandina" width={200} height={200} className="special-image" />
+                    <h4 className="special-name">Chocolate Cake “Amandina”</h4>
+                    <p className="special-description">Fluffy chocolate sponge, moist in a caramel syrup made from caramelised sugar, rum, true rum, chocolate filling made with yolks, milk, double cream, butter and chocolate <span className="special-ingredient">#callebaut</span>, chocolate fondant icing on top.</p>
+                    <ul className="special-attributes" aria-label="Amandina contains gluten, dairy and alcohol">
+                      <li className="special-attribute" aria-label="Contains gluten">
+                        <span className="dietary-icon icon-gluten" aria-hidden="true">
+                          <GlutenIcon />
+                        </span>
+                      </li>
+                      <li className="special-attribute" aria-label="Contains dairy">
+                        <span className="dietary-icon icon-dairy" aria-hidden="true">
+                          <DairyIcon />
+                        </span>
+                      </li>
+                      <li className="special-attribute" aria-label="Contains alcohol">
+                        <span className="dietary-icon icon-alcohol" aria-hidden="true">
+                          <AlcoholIcon />
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="special-card">
+                    <Image src="/images/tiramisu.png" alt="Tiramisu cheesecake" width={200} height={200} className="special-image" />
+                    <h4 className="special-name">Tiramisu Cheesecake</h4>
+                    <p className="special-description">Lady fingers sponge made by us, coffee, creamy filling made with mascarpone and double cream.</p>
+                    <ul className="special-attributes" aria-label="Tiramisu cheesecake contains gluten and dairy">
+                      <li className="special-attribute" aria-label="Contains gluten">
+                        <span className="dietary-icon icon-gluten" aria-hidden="true">
+                          <GlutenIcon />
+                        </span>
+                      </li>
+                      <li className="special-attribute" aria-label="Contains dairy">
+                        <span className="dietary-icon icon-dairy" aria-hidden="true">
+                          <DairyIcon />
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+        </section>
+        {/* <BakeryGallery /> */}
         <TestimonialsSection />
         <VisitUsSection />
 
@@ -287,7 +267,6 @@ export default function Home() {
           </nav>
         )}
       </main>
-      <Footer />
     </div>
   );
 }

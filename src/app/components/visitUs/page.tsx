@@ -13,8 +13,9 @@ const hours = [
 
 export default function VisitUsSection() {
   return (
-    <section id="visit-us" className="visit-us container" aria-labelledby="visit-us-title">
-      <div className="visit-content">
+    <section id="visit-us" className="visit-us-full-width" aria-labelledby="visit-us-title">
+      <div className="visit-us container">
+        <div className="visit-content">
         <span className="visit-eyebrow">Visit Us</span>
         <h2 id="visit-us-title" className="visit-title">Follow the smell of fresh bread - we&apos;re just around the corner!</h2>
         <p className="visit-text">Pop by our cozy bakery for a warm croissant, a chat with the team, or to pick up a custom celebration cake. We love meeting our customers and sharing the sweet moments in person.</p>
@@ -49,6 +50,7 @@ export default function VisitUsSection() {
           referrerPolicy="no-referrer-when-downgrade"
           allowFullScreen
         />
+      </div>
       </div>
     </section>
   );

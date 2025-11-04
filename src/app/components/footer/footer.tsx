@@ -18,12 +18,11 @@ export default function Footer() {
 				<div className="footer-links">
 					<div className="footer-column">
 						<h4 className="footer-heading">Quick Links</h4>
-									<ul className="footer-list">
-										<li><Link href="/about">About Us</Link></li>
-										<li><Link href="/products">Products</Link></li>
-										<li><Link href="/#categories">Categories</Link></li>
-										<li><Link href="/custom-order">Custom Order</Link></li>
-										<li><Link href="/ingredients">Ingredients</Link></li>
+						<ul className="footer-list">
+							<li><Link href="/about">About Us</Link></li>
+							<li><Link href="/products">Products</Link></li>
+							<li><Link href="/order-online">Order Online</Link></li>
+							<li><Link href="/visit-us">Visit Us</Link></li>
 						</ul>
 					</div>
 
@@ -31,12 +30,12 @@ export default function Footer() {
 						<h4 className="footer-heading">Stay Connected</h4>
 						<ul className="footer-list social-list">
 							<li>
-								<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+								<a href="https://www.facebook.com/madys.bakery" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
 									Facebook
 								</a>
 							</li>
 							<li>
-								<a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile">
+								<a href="https://www.instagram.com/maddysbakery2025/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile">
 									Instagram
 								</a>
 							</li>

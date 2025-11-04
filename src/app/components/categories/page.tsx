@@ -33,7 +33,7 @@ export default function CategoriesSection() {
   return (
     <section id="categories" className="categories container" aria-label="Categories">
       <div className="categories-header">
-        <h3 className="categories-title">Categories</h3>
+        <h3 className="categories-title">Products</h3>
         <p className="categories-intro">
           Explore the favorites our customers come back for—from crisp pastries to celebration cakes, each crafted
           fresh in our kitchen.

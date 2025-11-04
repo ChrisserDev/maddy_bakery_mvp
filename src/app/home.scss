@@ -95,64 +95,6 @@
     margin: 0 auto;
   }
 
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 0;
-    background: transparent;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-  }
-
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-    font-size: 1.2rem;
-    
-    &-link {
-      text-decoration: none;
-      color: var(--text-brown);
-      font-family: var(--font-body);
-      font-weight: 400;
-      position: relative;
-      transition: color 0.3s ease;
-
-      &::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        background-color: var(--headline-blue);
-        transition: width 0.3s ease;
-      }
-
-      &:hover {
-        color: var(--headline-blue);
-        
-        &::after {
-          width: 100%;
-        }
-      }
-    }
-    
-    &-icons {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      color: var(--button-brown);
-      margin-left: 8px;
-    }
-  }
-
   .hero {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
@@ -204,7 +146,7 @@
       .basket-image {
         position: relative;
         z-index: 2;
-        transform: translateY(-6px);
+        transform: translateY(85px);
         filter: drop-shadow(0 22px 40px rgba(97, 61, 33, 0.22));
       }
     }
@@ -241,7 +183,7 @@
   }
 
   .pink-cloud {
-    width: clamp(1420px, 52vw, 1400px);
+    width: clamp(1220px, 52vw, 1200px);
     height: auto;
     aspect-ratio: 1.65;
     background-image: url('/images/pink_home_background.png');
@@ -249,8 +191,8 @@
     background-size: contain;
     background-position: right center;
     position: absolute;
-    right: -43%;
-    top: 50%;
+    right: -36%;
+    top: 58%;
     transform: translateY(-50%);
     z-index: 1;
     pointer-events: none;

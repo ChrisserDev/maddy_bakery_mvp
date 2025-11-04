@@ -1,15 +1,21 @@
-.visit-us {
+.visit-us-full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   margin-top: 4rem !important;
-  padding: 2.5rem 3.5rem;
-  border-radius: 15px;
   background: rgb(255, 255, 255);
   box-shadow: 0 4px 4px rgba(164, 124, 104, 0.14);
+  position: relative;
+  overflow: hidden;
+}
+
+.visit-us {
+  padding: 2.5rem 3.5rem 10rem 3.5rem !important;
+  border-radius: 15px;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: 4rem;
   align-items: center;
   position: relative;
-  overflow: hidden;
 
   .visit-content {
     position: relative;

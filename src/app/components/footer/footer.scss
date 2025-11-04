@@ -1,11 +1,11 @@
 
 .site-footer {
-	margin-top: 9rem;
 	padding: 2.5rem 0 1.5rem;
 	background: var(--bg-cream);
 	color: rgba(44, 61, 81, 0.94);
 	position: relative;
 	overflow: hidden;
+    border-top: 1px solid rgba(198, 134, 47, 0.28);
 
 	&::before {
 		content: none;
@@ -30,6 +30,10 @@
 		gap: 1.2rem;
 		max-width: 320px;
 	}
+
+    .accent-desc {
+        color: var(--button-brown);
+    }
 
 	.footer-logo {
 		display: inline-flex;
@@ -121,7 +125,6 @@
 		z-index: 1;
 		margin-top: 2rem;
 		padding-top: 1rem;
-		border-top: 1px solid rgba(198, 134, 47, 0.28);
 		text-align: center;
 		display: flex;
 		flex-direction: column;

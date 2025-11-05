@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import BakeryGallery from "./components/gallery/gallery";
 import TestimonialsSection from "./components/testimonials/page";
 import CategoriesSection from "./components/categories/page";
 import VisitUsSection from "./components/visitUs/page";
@@ -160,7 +159,7 @@ export default function Home() {
                 <div className="todays-specials-grid">
                   <div className="special-card">
                     <Image src="/images/cremsnit.png" alt="Special Cake" width={200} height={200} className="special-image" />
-                    <h4 className="special-name">Custard Cake "Cremsnit"</h4>
+                    <h4 className="special-name">Custard Cake &quot;Cremsnit&quot;</h4>
                     <p className="special-price">£3.50</p>
                     <p className="special-description">Lovely puff pastry, <span className="special-ingredient">#cremapasticcera</span> custard filling with double cream <span className="special-ingredient">#cremadiplomatica</span> with true vanilla.</p>
                     <ul className="special-attributes" aria-label="Cremsnit contains gluten and dairy">
@@ -214,7 +213,7 @@ export default function Home() {
                   </div>
                   <div className="special-card">
                     <Image src="/images/amandina.png" alt="Chocolate cake Amandina" width={200} height={200} className="special-image" />
-                    <h4 className="special-name">Chocolate Cake "Amandina"</h4>
+                    <h4 className="special-name">Chocolate Cake &quot;Amandina&quot;</h4>
                     <p className="special-price">£3.95</p>
                     <p className="special-description">Fluffy chocolate sponge, moist in a caramel syrup made from caramelised sugar, rum, true rum, chocolate filling made with yolks, milk, double cream, butter and chocolate <span className="special-ingredient">#callebaut</span>, chocolate fondant icing on top.</p>
                     <ul className="special-attributes" aria-label="Amandina contains gluten, dairy and alcohol">
@@ -255,7 +254,6 @@ export default function Home() {
                   </div>
                 </div>
         </section>
-        {/* <BakeryGallery /> */}
         <TestimonialsSection />
         <VisitUsSection />
 

@@ -10,9 +10,13 @@
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 140;
+  z-index: 1000;
   background: var(--bg-cream);
-  border-bottom: 2px solid rgba(243, 207, 180, 0.5);
+  width: 100%;
+  
+  &.scrolled {
+    box-shadow: 0 4px 12px rgba(124, 64, 33, 0.12);
+  }
 }
 
 .site-header__inner {
@@ -43,7 +47,7 @@
   text-decoration: none;
   color: var(--text-brown);
   font-family: var(--font-body);
-  font-weight: 400;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 

@@ -42,7 +42,7 @@ export default function AboutPage() {
 								of fresh bread or a cake in the oven meant warmth, sharing, and comfort.
 							</p>
 							<p>
-								We want to bring that feeling back. Our products are made with the same attention and passion that once
+								We want to bring that feeling back. Our menu is made with the same attention and passion that once
 								filled every kitchen. Each loaf and cake is crafted to remind you of the simple joy that comes from quality
 								ingredients, time, and care.
 							</p>

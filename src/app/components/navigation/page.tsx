@@ -4,7 +4,7 @@ import "./navigation.scss";
 
 const links = [
   { href: "/about", label: "About Us" },
-  { href: "/products", label: "Products" },
+  { href: "/menu", label: "Menu" },
   { href: "/order-online", label: "Order Online" },
   { href: "/visit-us", label: "Visit Us" },
 ];
@@ -14,7 +14,7 @@ export default function Navigation() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link href="/" className="site-logo" aria-label="Maddy's Bakery home">
-          <Image src="/images/maddys_logo.png" alt="Maddy's Bakery logo" width={120} height={120} priority />
+          <Image src="/images/maddys_logo.png" alt="Maddy's Bakery logo" width={100} height={100} priority />
         </Link>
         <nav className="site-nav" aria-label="Primary navigation">
           {links.map((link) => (

@@ -84,7 +84,7 @@ export default function VisitUsPage() {
           <div className="extra-card parking">
             <h3 className="extra-title">🅿️ Parking</h3>
             <p className="extra-description">
-              Free street parking available directly outside. Accessible parking spots are located on the adjacent streets.
+              Free parking available behind the building. Accessible parking spots are located on the adjacent streets.
             </p>
           </div>
           

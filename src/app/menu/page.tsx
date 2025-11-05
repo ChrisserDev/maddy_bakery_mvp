@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Category, categories, products } from "./productsData";
-import "./products.scss";
+import { Category, categories, products } from "./menuData";
+import "./menu.scss";
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState<Category>("all");
@@ -16,7 +16,7 @@ export default function ProductsPage() {
     <div className="products-page">
       <section className="products-hero container">
         <div className="products-hero-content">
-          <span className="products-eyebrow">Our Products</span>
+          <span className="products-eyebrow">Our Menu</span>
           <h1 className="products-title">Baked Daily with Love</h1>
           <p className="products-description">
             From flaky croissants to celebration cakes, every item in our bakery is made fresh using traditional techniques and the finest ingredients.

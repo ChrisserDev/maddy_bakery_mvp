@@ -133,9 +133,11 @@ export default function Home() {
 
         <section className="todays-specials container">
                 <div className="todays-specials-header">
+                  <span className="todays-specials-eyebrow">Fresh Daily</span>
                   <h3 className="todays-specials-title">Today&apos;s Specials</h3>
                   <p className="todays-specials-intro">We mark each treat with simple icons so you can quickly see the key ingredients and choose the perfect delight for your day.</p>
-                  <ul className="todays-specials-legend" aria-label="Ingredient and allergen legend">
+                </div>
+                <ul className="todays-specials-legend" aria-label="Ingredient and allergen legend">
                     <li className="legend-item" aria-label="Contains gluten">
                       <span className="dietary-icon icon-gluten" aria-hidden="true">
                         <GlutenIcon />
@@ -155,11 +157,11 @@ export default function Home() {
                       <span className="legend-label">Contains Alcohol</span>
                     </li>
                   </ul>
-                </div>
                 <div className="todays-specials-grid">
                   <div className="special-card">
                     <Image src="/images/cremsnit.png" alt="Special Cake" width={200} height={200} className="special-image" />
-                    <h4 className="special-name">Custard Cake “Cremsnit”</h4>
+                    <h4 className="special-name">Custard Cake "Cremsnit"</h4>
+                    <p className="special-price">£3.50</p>
                     <p className="special-description">Lovely puff pastry, <span className="special-ingredient">#cremapasticcera</span> custard filling with double cream <span className="special-ingredient">#cremadiplomatica</span> with true vanilla.</p>
                     <ul className="special-attributes" aria-label="Cremsnit contains gluten and dairy">
                       <li className="special-attribute" aria-label="Contains gluten">
@@ -177,6 +179,7 @@ export default function Home() {
                   <div className="special-card">
                     <Image src="/images/blackforest.png" alt="Special Pastry" width={200} height={200} className="special-image" />
                     <h4 className="special-name">Black Forest</h4>
+                    <p className="special-price">£4.25</p>
                     <p className="special-description">Fluffy chocolate sponge, fresh filling made with mascarpone, double cream and sour cream, sour cherry.</p>
                     <ul className="special-attributes" aria-label="Black forest cake contains gluten and dairy">
                       <li className="special-attribute" aria-label="Contains gluten">
@@ -194,6 +197,7 @@ export default function Home() {
                   <div className="special-card">
                     <Image src="/images/eclairs.png" alt="Special Bread" width={200} height={200} className="special-image" />
                     <h4 className="special-name">Eclairs</h4>
+                    <p className="special-price">£2.75</p>
                     <p className="special-description">Crunchy shells made by us, true vanilla filling <span className="special-ingredient">#cremapasticcera</span> made with yolks, milk, double cream and vanilla, dipped in Callebaut chocolate <span className="special-ingredient">#callebaut</span>.</p>
                     <ul className="special-attributes" aria-label="Eclairs contain gluten and dairy">
                       <li className="special-attribute" aria-label="Contains gluten">
@@ -210,7 +214,8 @@ export default function Home() {
                   </div>
                   <div className="special-card">
                     <Image src="/images/amandina.png" alt="Chocolate cake Amandina" width={200} height={200} className="special-image" />
-                    <h4 className="special-name">Chocolate Cake “Amandina”</h4>
+                    <h4 className="special-name">Chocolate Cake "Amandina"</h4>
+                    <p className="special-price">£3.95</p>
                     <p className="special-description">Fluffy chocolate sponge, moist in a caramel syrup made from caramelised sugar, rum, true rum, chocolate filling made with yolks, milk, double cream, butter and chocolate <span className="special-ingredient">#callebaut</span>, chocolate fondant icing on top.</p>
                     <ul className="special-attributes" aria-label="Amandina contains gluten, dairy and alcohol">
                       <li className="special-attribute" aria-label="Contains gluten">
@@ -233,6 +238,7 @@ export default function Home() {
                   <div className="special-card">
                     <Image src="/images/tiramisu.png" alt="Tiramisu cheesecake" width={200} height={200} className="special-image" />
                     <h4 className="special-name">Tiramisu Cheesecake</h4>
+                    <p className="special-price">£3.25</p>
                     <p className="special-description">Lady fingers sponge made by us, coffee, creamy filling made with mascarpone and double cream.</p>
                     <ul className="special-attributes" aria-label="Tiramisu cheesecake contains gluten and dairy">
                       <li className="special-attribute" aria-label="Contains gluten">

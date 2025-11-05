@@ -5,7 +5,6 @@
 	color: rgba(44, 61, 81, 0.94);
 	position: relative;
 	overflow: hidden;
-    border-top: 1px solid rgba(198, 134, 47, 0.28);
 
 	&::before {
 		content: none;
@@ -85,9 +84,13 @@
 		list-style: none;
 		display: flex;
 		flex-direction: column;
-		gap: 0.8rem;
+		gap: 1.2rem;
 		padding: 0;
 		margin: 0;
+
+		li {
+			font-weight: 600;
+		}
 
 		a {
 			color: rgba(76, 45, 31, 0.85);

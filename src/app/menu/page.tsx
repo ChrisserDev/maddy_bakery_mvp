@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { Category, categories, products } from "./menuData";
 import "./menu.scss";
 
-export default function ProductsPage() {
+function ProductsPageContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get("category") as Category | null;
   
@@ -111,5 +111,13 @@ export default function ProductsPage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<div className="products-page">Loading...</div>}>
+      <ProductsPageContent />
+    </Suspense>
   );
 }

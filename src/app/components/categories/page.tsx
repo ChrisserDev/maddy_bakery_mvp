@@ -43,7 +43,7 @@ export default function CategoriesSection() {
         </div>
         <div className="categories-grid">
           {categories.map((category) => (
-            <Link key={category.slug} className="category-card" href={`/menu#${category.slug}`}>
+            <Link key={category.slug} className="category-card" href={`/menu?category=${category.slug}`}>
               <div className="category-media">
                 <Image
                   src={category.image}

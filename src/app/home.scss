@@ -432,4 +432,168 @@
       }
     }
   }
+
+  // Mobile Responsive Styles
+  @media (max-width: 900px) {
+    .container {
+      padding: 0 clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding: 3rem 0;
+
+      &-content {
+        padding: 0 2rem 4rem 2rem;
+        text-align: center;
+      }
+
+      &-title {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+      }
+
+      &-description {
+        max-width: 100%;
+      }
+
+      &-actions {
+        justify-content: center;
+      }
+
+      &-image {
+        // order: 1;
+        display: none;
+
+        .basket-image {
+          transform: translateY(0);
+          max-width: 300px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .pink-cloud {
+      display: none;
+    }
+
+    .todays-specials {
+      &-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .special-image {
+        max-height: 180px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+
+    .hero {
+      padding: 1rem 0;
+
+      &-title {
+        font-size: clamp(2rem, 10vw, 3rem);
+
+        span {
+          font-size: 3rem;
+        }
+      }
+
+      &-description {
+        font-size: 1.05rem;
+      }
+
+      &-actions {
+        flex-direction: column;
+        width: 100%;
+
+        .cta-button,
+        .about-cta {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      &-image {
+        .basket-image {
+          max-width: 250px;
+        }
+      }
+    }
+
+    .todays-specials {
+      padding: 1rem 1rem 0 1rem;
+
+      &-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+      }
+
+      &-header {
+        margin-bottom: 1.5rem;
+      }
+
+      .special-card {
+        padding: 0 0 1rem;
+      }
+
+      .special-image {
+        max-height: 140px;
+        object-fit: cover;
+      }
+
+      .special-name {
+        font-size: 1rem;
+        min-height: auto;
+        padding: 0 0.5rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .special-price {
+        font-size: 1rem;
+        margin: 0 0 0.5rem;
+        padding: 0 0.5rem;
+      }
+
+      .special-description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        padding: 0 0.5rem;
+      }
+
+      .special-order-info {
+        gap: 0.3rem;
+        margin: 0.5rem 0 0.3rem;
+        padding: 0 0.5rem;
+      }
+
+      .order-label {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.4rem;
+      }
+
+      .special-attributes {
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+      }
+
+      .dietary-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        svg {
+          width: 0.9rem;
+          height: 0.9rem;
+        }
+      }
+    }
+  }
 }

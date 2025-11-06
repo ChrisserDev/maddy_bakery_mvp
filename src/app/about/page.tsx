@@ -7,7 +7,7 @@ const teamMembers = [
 		role: "Founder & Head Baker",
 	},
 	{
-		name: "Alex Ionescu",
+		name: "Alexandru Ionescu",
 		role: "Pastry Artist",
 	},
 	{
@@ -15,12 +15,8 @@ const teamMembers = [
 		role: "Bread Lead",
 	},
 	{
-		name: "Chris Nguyen",
-		role: "Guest Experience",
-	},
-	{
-		name: "Future Teammate",
-		role: "Your Seat at the Table",
+		name: "Cristina Vasilescu",
+		role: "Guest Relations Manager",
 	},
 ];
 

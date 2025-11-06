@@ -377,16 +377,39 @@
   }
 
   .products-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .product-media {
-    height: 200px;
+    height: 150px;
   }
 
   .product-info {
-    padding: 1rem;
+    padding: 0.8rem;
+  }
+
+  .product-name {
+    font-size: 0.95rem;
+    min-height: auto;
+  }
+
+  .product-description {
+    font-size: 0.85rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .product-order-info {
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+  }
+
+  .order-label {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
   }
 
   .custom-order-content {
@@ -399,7 +422,7 @@
   }
 
   .custom-order-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 0.4rem;
   }
 

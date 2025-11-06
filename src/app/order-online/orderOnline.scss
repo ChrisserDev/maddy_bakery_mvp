@@ -250,7 +250,11 @@
   position: relative;
   z-index: 1;
   min-width: 180px;
-
+  @media screen and (max-width: 600px) {
+    font-size: .9rem;
+    padding: .5rem 1rem;
+  }
+  
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(198, 134, 47, 0.4), 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -316,6 +320,10 @@
   position: relative;
   z-index: 1;
   min-width: 180px;
+  @media screen and (max-width: 600px) {
+    font-size: .9rem;
+    padding: .5rem 1rem;
+  }
   
   .phone-icon {
     flex-shrink: 0;
@@ -596,6 +604,63 @@
 
   .info-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .order-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .order-hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .order-hero {
+    padding-top: clamp(2rem, 6vw, 4rem);
+    padding-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .delivery-card,
+  .offer-card {
+    padding: 1.5rem;
+  }
+
+  .delivery-icon {
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(198, 134, 47, 0.1);
+    border-radius: 50%;
+    margin-bottom: 0.3rem;
+  }
+
+  .delivery-name {
+    font-size: 1.2rem;
   }
 }
 

@@ -38,10 +38,10 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		border-radius: 20px;
+		border-radius: 6px;
 		padding: 0.65rem;
 		background: rgba(255, 255, 255, 0.75);
-		box-shadow: 0 12px 28px rgba(124, 64, 33, 0.12);
+		box-shadow: 0 4px 8px rgba(124, 64, 33, 0.12);
 		transition: transform 0.18s ease;
 
 		&:hover {
@@ -180,24 +180,63 @@
 	}
 
 	@media (max-width: 900px) {
-		padding: 4rem 0 2.2rem;
+		padding: 2rem 0 1rem;
 
 		.footer-container {
 			flex-direction: column;
 			align-items: center;
 			text-align: center;
+			gap: 2.5rem;
 		}
 
 		.footer-brand {
+			display: none;
 			align-items: center;
+			max-width: 100%;
 		}
 
 		.footer-links {
 			justify-content: center;
+			flex-direction: column;
+			gap: 2rem;
+			min-width: auto;
 		}
 
 		.footer-column {
 			align-items: center;
+			min-width: auto;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.footer-container {
+			gap: 2rem;
+		}
+
+		.footer-tagline {
+			font-size: 1rem;
+		}
+
+		.footer-links {
+			width: 100%;
+			gap: 1.5rem;
+		}
+
+		.footer-bottom {
+			gap: 0.8rem;
+			margin-top: 1.5rem;
+		}
+
+		.footer-copyright {
+			font-size: 0.75rem;
+			padding: 0.6rem 1rem;
+			flex-direction: column;
+			gap: 0.5rem;
+			text-align: center;
+
+			.linkedin-link {
+				margin-left: 0;
+			}
 		}
 	}
 

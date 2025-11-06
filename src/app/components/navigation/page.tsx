@@ -1,5 +1,9 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import "./navigation.scss";
 
 const links = [
@@ -10,12 +14,37 @@ const links = [
 ];
 
 export default function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Close menu when route changes
+  useEffect(() => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
   return (
     <header className="site-header">
       <div className="site-header__inner">
         <Link href="/" className="site-logo" aria-label="Maddy's Bakery home">
           <Image src="/images/maddys_logo.png" alt="Maddy's Bakery logo" width={100} height={100} priority />
         </Link>
+        
+        {/* Desktop Navigation */}
         <nav className="site-nav" aria-label="Primary navigation">
           {links.map((link) => (
             <Link key={link.href} href={link.href} className="site-nav__link">
@@ -29,7 +58,43 @@ export default function Navigation() {
             </svg>
           </span>
         </nav>
+
+        {/* Mobile Hamburger Button */}
+        <button 
+          className={`hamburger ${isMenuOpen ? 'is-active' : ''}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className="hamburger__line"></span>
+          <span className="hamburger__line"></span>
+          <span className="hamburger__line"></span>
+        </button>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      <div className={`mobile-menu ${isMenuOpen ? 'is-open' : ''}`}>
+        <nav className="mobile-menu__nav" aria-label="Mobile navigation">
+          {links.map((link) => (
+            <Link 
+              key={link.href} 
+              href={link.href} 
+              className="mobile-menu__link"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+
+      {/* Overlay */}
+      {isMenuOpen && (
+        <div 
+          className="mobile-menu__overlay" 
+          onClick={() => setIsMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
     </header>
   );
 }

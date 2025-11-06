@@ -257,6 +257,20 @@
   }
 }
 
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .visit-us-info {
+    gap: 2rem;
+  }
+
+  .extra-card {
+    padding: 1.5rem;
+  }
+}
+
 @media (max-width: 480px) {
   .visit-us-hero {
     padding-top: clamp(2rem, 6vw, 4rem);
@@ -267,13 +281,11 @@
     font-size: 0.95rem;
   }
 
-  .hours-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.3rem;
-  }
-
   .map-iframe {
     height: 250px;
+  }
+
+  .visit-us-address {
+    font-size: 1rem;
   }
 }

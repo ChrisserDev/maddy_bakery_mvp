@@ -146,6 +146,39 @@
 		font-size: 0.92rem;
 	}
 
+	.footer-copyright {
+		font-size: 0.85rem;
+		background: #000000;
+		color: #ffffff;
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		margin: 0.5rem auto 0;
+
+		.linkedin-link {
+			display: inline-flex;
+			align-items: center;
+			color: #ffffff;
+			transition: color 0.2s ease, transform 0.2s ease;
+
+			&:hover {
+				color: #0077b5;
+				transform: translateY(-2px);
+			}
+
+			svg {
+				transition: transform 0.2s ease;
+			}
+
+			&:hover svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+
 	@media (max-width: 900px) {
 		padding: 4rem 0 2.2rem;
 

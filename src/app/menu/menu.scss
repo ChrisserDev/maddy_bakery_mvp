@@ -31,7 +31,6 @@
   padding: 0 clamp(1.5rem, 4vw, 3rem);
 }
 
-// Hero Section
 .products-hero {
   padding-top: clamp(4rem, 8vw, 6rem) !important;
   padding-bottom: clamp(2rem, 4vw, 6rem) !important;
@@ -73,7 +72,6 @@
   opacity: 0.9;
 }
 
-// Shop by Category Section
 .shop-by-category {
   padding: clamp(2rem, 4vw, 1rem) 0 clamp(1.5rem, 3vw, 1rem);
   position: relative;
@@ -135,7 +133,6 @@
   }
 }
 
-// Products Grid Section
 .products-grid-section {
   padding-top: clamp(2rem, 4vw, 3rem);
 }
@@ -150,17 +147,17 @@
 .product-card {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(243, 207, 180, 0.55);
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(124, 64, 33, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 5px rgba(124, 64, 33, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   backdrop-filter: blur(4px);
-  min-height: 400px;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
 
   &:hover {
-    transform: translateY(-6px);
+    transform: translateY(-1px);
     box-shadow: 0 12px 35px rgba(124, 64, 33, 0.18);
   }
 }
@@ -177,14 +174,11 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-
-  .product-card:hover & {
-    transform: scale(1.05);
-  }
 }
 
 .product-info {
-  padding: 1.5rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -219,6 +213,38 @@
   font-weight: 600;
   color: var(--button-brown);
   margin-top: 0.5rem;
+}
+
+.product-order-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.order-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: rgba(76, 45, 31, 0.7);
+  background: rgba(198, 134, 47, 0.08);
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(198, 134, 47, 0.15);
+  white-space: nowrap;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: rgba(198, 134, 47, 0.15);
+    border-color: rgba(198, 134, 47, 0.25);
+    color: var(--button-brown);
+    transform: translateY(-1px);
+  }
 }
 
 // No Products State

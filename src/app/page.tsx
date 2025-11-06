@@ -162,6 +162,11 @@ export default function Home() {
                     <h4 className="special-name">Custard Cake &quot;Cremsnit&quot;</h4>
                     <p className="special-price">£3.50</p>
                     <p className="special-description">Lovely puff pastry, <span className="special-ingredient">#cremapasticcera</span> custard filling with double cream <span className="special-ingredient">#cremadiplomatica</span> with true vanilla.</p>
+                    <div className="special-order-info">
+                      <a href="https://www.ubereats.com/gb/store/maddys-bakery/HUxhJ3kyS2-E1AyrI15bSw" target="_blank" rel="noopener noreferrer" className="order-label">🛵 Uber Eats</a>
+                      <a href="https://www.just-eat.co.uk/restaurants-maddys-bakery-stevenage/menu#category_216b14dc-9844-4d0b-a7f1-9794aee8c1b2" target="_blank" rel="noopener noreferrer" className="order-label">🚚 Just Eat</a>
+                      <a href="tel:01438592576" className="order-label">📞 Custom</a>
+                    </div>
                     <ul className="special-attributes" aria-label="Cremsnit contains gluten and dairy">
                       <li className="special-attribute" aria-label="Contains gluten">
                         <span className="dietary-icon icon-gluten" aria-hidden="true">
@@ -180,6 +185,11 @@ export default function Home() {
                     <h4 className="special-name">Black Forest</h4>
                     <p className="special-price">£4.25</p>
                     <p className="special-description">Fluffy chocolate sponge, fresh filling made with mascarpone, double cream and sour cream, sour cherry.</p>
+                    <div className="special-order-info">
+                      <a href="https://www.ubereats.com/gb/store/maddys-bakery/HUxhJ3kyS2-E1AyrI15bSw" target="_blank" rel="noopener noreferrer" className="order-label">🛵 Uber Eats</a>
+                      <a href="https://www.just-eat.co.uk/restaurants-maddys-bakery-stevenage/menu#category_216b14dc-9844-4d0b-a7f1-9794aee8c1b2" target="_blank" rel="noopener noreferrer" className="order-label">🚚 Just Eat</a>
+                      <a href="tel:01438592576" className="order-label">📞 Custom</a>
+                    </div>
                     <ul className="special-attributes" aria-label="Black forest cake contains gluten and dairy">
                       <li className="special-attribute" aria-label="Contains gluten">
                         <span className="dietary-icon icon-gluten" aria-hidden="true">
@@ -198,6 +208,11 @@ export default function Home() {
                     <h4 className="special-name">Eclairs</h4>
                     <p className="special-price">£2.75</p>
                     <p className="special-description">Crunchy shells made by us, true vanilla filling <span className="special-ingredient">#cremapasticcera</span> made with yolks, milk, double cream and vanilla, dipped in Callebaut chocolate <span className="special-ingredient">#callebaut</span>.</p>
+                    <div className="special-order-info">
+                      <a href="https://www.ubereats.com/gb/store/maddys-bakery/HUxhJ3kyS2-E1AyrI15bSw" target="_blank" rel="noopener noreferrer" className="order-label">🛵 Uber Eats</a>
+                      <a href="https://www.just-eat.co.uk/restaurants-maddys-bakery-stevenage/menu#category_216b14dc-9844-4d0b-a7f1-9794aee8c1b2" target="_blank" rel="noopener noreferrer" className="order-label">🚚 Just Eat</a>
+                      <a href="tel:01438592576" className="order-label">📞 Custom</a>
+                    </div>
                     <ul className="special-attributes" aria-label="Eclairs contain gluten and dairy">
                       <li className="special-attribute" aria-label="Contains gluten">
                         <span className="dietary-icon icon-gluten" aria-hidden="true">
@@ -216,6 +231,11 @@ export default function Home() {
                     <h4 className="special-name">Chocolate Cake &quot;Amandina&quot;</h4>
                     <p className="special-price">£3.95</p>
                     <p className="special-description">Fluffy chocolate sponge, moist in a caramel syrup made from caramelised sugar, rum, true rum, chocolate filling made with yolks, milk, double cream, butter and chocolate <span className="special-ingredient">#callebaut</span>, chocolate fondant icing on top.</p>
+                    <div className="special-order-info">
+                      <a href="https://www.ubereats.com/gb/store/maddys-bakery/HUxhJ3kyS2-E1AyrI15bSw" target="_blank" rel="noopener noreferrer" className="order-label">🛵 Uber Eats</a>
+                      <a href="https://www.just-eat.co.uk/restaurants-maddys-bakery-stevenage/menu#category_216b14dc-9844-4d0b-a7f1-9794aee8c1b2" target="_blank" rel="noopener noreferrer" className="order-label">🚚 Just Eat</a>
+                      <a href="tel:01438592576" className="order-label">📞 Custom</a>
+                    </div>
                     <ul className="special-attributes" aria-label="Amandina contains gluten, dairy and alcohol">
                       <li className="special-attribute" aria-label="Contains gluten">
                         <span className="dietary-icon icon-gluten" aria-hidden="true">
@@ -239,6 +259,11 @@ export default function Home() {
                     <h4 className="special-name">Tiramisu Cheesecake</h4>
                     <p className="special-price">£3.25</p>
                     <p className="special-description">Lady fingers sponge made by us, coffee, creamy filling made with mascarpone and double cream.</p>
+                    <div className="special-order-info">
+                      <a href="https://www.ubereats.com/gb/store/maddys-bakery/HUxhJ3kyS2-E1AyrI15bSw" target="_blank" rel="noopener noreferrer" className="order-label">🛵 Uber Eats</a>
+                      <a href="https://www.just-eat.co.uk/restaurants-maddys-bakery-stevenage/menu#category_216b14dc-9844-4d0b-a7f1-9794aee8c1b2" target="_blank" rel="noopener noreferrer" className="order-label">🚚 Just Eat</a>
+                      <a href="tel:01438592576" className="order-label">📞 Custom</a>
+                    </div>
                     <ul className="special-attributes" aria-label="Tiramisu cheesecake contains gluten and dairy">
                       <li className="special-attribute" aria-label="Contains gluten">
                         <span className="dietary-icon icon-gluten" aria-hidden="true">

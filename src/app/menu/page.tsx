@@ -1,12 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { Category, categories, products } from "./menuData";
 import "./menu.scss";
 
 export default function ProductsPage() {
-  const [selectedCategory, setSelectedCategory] = useState<Category>("all");
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category") as Category | null;
+  
+  // Initialize with URL parameter if valid, otherwise "all"
+  const getInitialCategory = (): Category => {
+    if (categoryParam && ["all", "pastries", "cakes", "bread", "cookies"].includes(categoryParam)) {
+      return categoryParam;
+    }
+    return "all";
+  };
+  
+  const [selectedCategory, setSelectedCategory] = useState<Category>(getInitialCategory());
+
+  useEffect(() => {
+    const newCategory = getInitialCategory();
+    if (newCategory !== selectedCategory) {
+      setSelectedCategory(newCategory);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categoryParam]);
 
   const filteredProducts = selectedCategory === "all" 
     ? products 
@@ -57,6 +77,11 @@ export default function ProductsPage() {
                 <h3 className="product-name">{product.name}</h3>
                 <p className="product-description">{product.description}</p>
                 <span className="product-price">{product.price}</span>
+                <div className="product-order-info">
+                  <a href="https://www.ubereats.com/gb/store/maddys-bakery/HUxhJ3kyS2-E1AyrI15bSw" target="_blank" rel="noopener noreferrer" className="order-label">🛵 Uber Eats</a>
+                  <a href="https://www.just-eat.co.uk/restaurants-maddys-bakery-stevenage/menu" target="_blank" rel="noopener noreferrer" className="order-label">🚚 Just Eat</a>
+                  <a href="tel:01438592576" className="order-label">📞 Custom</a>
+                </div>
               </div>
             </div>
           ))}

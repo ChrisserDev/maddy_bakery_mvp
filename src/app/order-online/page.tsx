@@ -64,7 +64,7 @@ export default function OrderOnlinePage() {
             <div className="delivery-header">
               <span className="delivery-icon">📞</span>
               <h3 className="delivery-name">Call Us Directly</h3>
-              <span className="delivery-time">Custom Orders</span>
+              <span className="delivery-time mobileHide">Custom Orders</span>
             </div>
             <p className="delivery-description">
               Planning a celebration or need special dietary options? Our bakers are here to create exactly what you&apos;re dreaming of.

@@ -40,14 +40,14 @@ export default function VisitUsPage() {
               <Link href="mailto:contact@maddysbakery.co.uk" className="address-link email">
                 ✉️ contact@maddysbakery.co.uk
               </Link>
-              <Link 
-                href="https://maps.google.com/?q=15+The+Glebe,+Stevenage+SG2+0DL" 
+              <a 
+                href="https://maps.google.com/?q=Maddy's+Bakery+Stevenage" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="address-link maps"
               >
                 🗺️ Open in Google Maps
-              </Link>
+              </a>
             </address>
           </div>
 

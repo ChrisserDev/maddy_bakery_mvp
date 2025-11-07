@@ -20,6 +20,7 @@
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+  padding-top: 2rem;
   // background: radial-gradient(circle at top right, rgba(252, 211, 212, 0.3) 0%, rgba(252, 211, 212, 0) 55%),
   //   linear-gradient(180deg, var(--bg-cream) 0%, #fef6ee 100%);
   color: var(--text-brown);
@@ -32,7 +33,6 @@
   padding: 0 clamp(1.5rem, 4vw, 3rem);
 }
 
-// Hero Section
 .order-hero {
   padding-top: clamp(4rem, 8vw, 6rem);
   padding-bottom: clamp(3rem, 6vw, 5rem);
@@ -102,7 +102,6 @@
   gap: 0.5rem;
 }
 
-// Section Titles
 .section-title {
   font-family: var(--font-heading);
   font-size: clamp(1.8rem, 4vw, 2.6rem);
@@ -113,9 +112,12 @@
   letter-spacing: -0.01em;
 }
 
-// Order Options Section
 .order-options {
+  margin: 2rem 0 !important;
   margin-bottom: clamp(4rem, 8vw, 6rem);
+  @media screen and (max-width: 600px) {
+    margin: 0 0 4rem 0 !important;
+  }
 }
 
 .options-grid {
@@ -185,6 +187,14 @@
   font-weight: 600;
   border: 1px solid rgba(198, 134, 47, 0.2);
   box-shadow: 0 2px 8px rgba(198, 134, 47, 0.1);
+  @media screen and (max-width: 600px) {
+    margin-left: 3rem;
+  }
+}
+.delivery-time.mobileHide {
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .delivery-description {
@@ -291,7 +301,7 @@
   
   .delivery-name {
     color: var(--headline-blue);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   
   .delivery-time {
@@ -682,8 +692,10 @@
   }
 
   .delivery-header {
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
   }
 
   .custom-features {

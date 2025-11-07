@@ -24,9 +24,9 @@ export default function VisitUsSection() {
           <strong className="address-line">Maddy&apos;s Bakery</strong>
           <span className="address-line">15 The Glebe</span>
           <span className="address-line">Stevenage SG2 0DL</span>
-          <Link href="https://maps.google.com/?q=15+The+Glebe,+Stevenage+SG2+0DL" target="_blank" rel="noopener noreferrer" className="address-link">
+          <a href="https://maps.google.com/?q=Maddy's+Bakery+Stevenage" target="_blank" rel="noopener noreferrer" className="address-link">
             Open in Google Maps
-          </Link>
+          </a>
         </address>
 
         <div className="visit-hours" aria-label="Opening hours">

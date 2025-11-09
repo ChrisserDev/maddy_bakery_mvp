@@ -29,6 +29,9 @@
   width: calc(100% - 15rem);
   margin: 5rem auto 2rem auto;
   padding: 0 3rem;
+  @media (min-width: 901px) {
+    padding: 0 clamp(20px, 5vw, 100px);
+  }
 }
 
 .about-hero {

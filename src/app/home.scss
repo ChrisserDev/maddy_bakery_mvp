@@ -23,7 +23,10 @@
 
   .container {
     width: min(1700px, 100%);
-    margin: 0 auto;
+    margin: 0 auto;    
+    @media (min-width: 901px) {
+      padding: 0 clamp(20px, 5vw, 100px) !important;
+    }
   }
 
   .hero {
@@ -123,7 +126,7 @@
     background-size: contain;
     background-position: right center;
     position: absolute;
-    right: -36%;
+    right: -50%;
     top: 58%;
     transform: translateY(-50%);
     z-index: 1;
